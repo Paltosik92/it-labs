@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+main {
+    padding: 2em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#welcome {
+    text-align: center;
+}
+
+/* about */
+#about {
+    padding: 2em;
+    text-align: left;
+}
+
+#about h2 {
+    color: #4CAF50;
+}
+
+#about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#about ul li {
+    margin-bottom: 0.5em;
+}
+
+/* contact */
+#contact {
+    padding: 2em;
+    text-align: left;
+}
+
+#contact h2 {
+    color: #4CAF50;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#contact label {
+    font-weight: bold;
+}
+
+#contact input, 
+#contact textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #45a049;
+}
+
+/* labs */
+aside {
+    width: 20%;
+    padding: 1em;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ccc;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+aside h2 {
+    color: #4CAF50;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 1em;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+section#content {
+    flex: 1;
+    padding: 2em;
+    overflow-y: auto;
+}
+
+section#content article {
+    display: none;
+}
+
+section#content article h2 {
+    color: #4CAF50;
+}
