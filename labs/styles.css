@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
 }
@@ -43,7 +43,7 @@ main {
 }
 
 aside {
-    width: 100%; /* Изменено для адаптивности */
+    width: 90%; /* Изменено для адаптивности */
     background-color: #f4f4f4;
     padding: 1em;
     border-right: 1px solid #ccc;
@@ -74,6 +74,7 @@ aside ul li a:hover {
 }
 
 section#content {
+    text-align: justify;
     flex: 1;
     padding: 2em;
     background-color: #fff;
