@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
 }
@@ -18,7 +18,8 @@ nav ul {
     display: flex;
     justify-content: center;
     background-color: #333;
-    flex-wrap: wrap; /* Добавлено для адаптивности */
+    flex-wrap: wrap;
+    /* Добавлено для адаптивности */
 }
 
 nav ul li {
@@ -57,7 +58,7 @@ footer {
 /* about */
 #about {
     padding: 2em;
-    text-align: left;
+    text-align: justify;
 }
 
 #about h2 {
@@ -164,19 +165,25 @@ section#content article h2 {
 /* Медиазапросы для адаптивности */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Изменение направления на мобильных устройствах */
+        flex-direction: column;
+        /* Изменение направления на мобильных устройствах */
     }
 
     aside {
-        width: 100%; /* Изменение ширины для мобильных устройств */
+        width: 100%;
+        /* Изменение ширины для мобильных устройств */
         height: auto;
-        border-right: none; /* Убрать правую границу */
-        border-bottom: 1px solid #ccc; /* Добавить нижнюю границу */
+        border-right: none;
+        /* Убрать правую границу */
+        border-bottom: 1px solid #ccc;
+        /* Добавить нижнюю границу */
     }
 
     section#content {
-        margin-left: 0; /* Убрать левый отступ */
-        margin-top: 1em; /* Добавить верхний отступ */
+        margin-left: 0;
+        /* Убрать левый отступ */
+        margin-top: 1em;
+        /* Добавить верхний отступ */
     }
 
     footer {
@@ -190,7 +197,8 @@ section#content article h2 {
     }
 
     aside {
-        height: 100vh; /* Вернуть исходную высоту для больших экранов */
+        height: 100vh;
+        /* Вернуть исходную высоту для больших экранов */
     }
 
     footer {
