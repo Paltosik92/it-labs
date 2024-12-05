@@ -18,6 +18,7 @@ nav ul {
     display: flex;
     justify-content: center;
     background-color: #333;
+    flex-wrap: wrap; /* Добавлено для адаптивности */
 }
 
 nav ul li {
@@ -92,7 +93,7 @@ footer {
     font-weight: bold;
 }
 
-#contact input, 
+#contact input,
 #contact textarea {
     padding: 0.5em;
     border: 1px solid #ccc;
@@ -124,6 +125,7 @@ aside {
 
 aside h2 {
     color: #4CAF50;
+    font-size: 18px;
 }
 
 aside ul {
@@ -148,6 +150,7 @@ section#content {
     flex: 1;
     padding: 2em;
     overflow-y: auto;
+    text-align: center;
 }
 
 section#content article {
@@ -156,4 +159,41 @@ section#content article {
 
 section#content article h2 {
     color: #4CAF50;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Изменение направления на мобильных устройствах */
+    }
+
+    aside {
+        width: 100%; /* Изменение ширины для мобильных устройств */
+        height: auto;
+        border-right: none; /* Убрать правую границу */
+        border-bottom: 1px solid #ccc; /* Добавить нижнюю границу */
+    }
+
+    section#content {
+        margin-left: 0; /* Убрать левый отступ */
+        margin-top: 1em; /* Добавить верхний отступ */
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+@media (min-width: 769px) {
+    main {
+        display: flex;
+    }
+
+    aside {
+        height: 100vh; /* Вернуть исходную высоту для больших экранов */
+    }
+
+    footer {
+        position: fixed;
+    }
 }
