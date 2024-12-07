@@ -39,7 +39,7 @@ nav ul li a:hover {
 main {
     display: flex;
     flex-direction: column; /* Изменено для адаптивности */
-    padding: 2em;
+    padding: 0.5em;
 }
 
 aside {
