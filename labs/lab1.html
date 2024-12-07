@@ -69,36 +69,704 @@
                     1. Запускаем <b>Unity Hub.</b>
                 </p>
                 <p>
-                    <a href="../img/lab1/image1.png" target="_blank"><img src="../img/lab1/image1.png" alt="Unity Hub"></a>
+                    <a href="../img/lab1/image1.png" target="_blank"><img src="../img/lab1/image1.png"
+                            alt="Unity Hub"></a>
                 </p>
                 <p>
                     2. Создаём новый проект – <b>New project:</b>
                 </p>
                 <p>
-                    <a href="../img/lab1/image2.png" target="_blank"><img src="../img/lab1/image2.png" alt="New project"></a>
+                    <a href="../img/lab1/image2.png" target="_blank"><img src="../img/lab1/image2.png"
+                            alt="New project"></a>
                 </p>
                 <p>
-                    3. Выбираем <b>2D.</b> Вводим название проекта, выбираем место расположения, и нажимаем <b>Create project.</b></p>
+                    3. Выбираем <b>2D.</b> Вводим название проекта, выбираем место расположения, и нажимаем <b>Create
+                        project.</b></p>
                 <p>
                     4. В папке <b>Scenes</b> меняем название сцены, на имя игры:
                 </p>
                 <p>
-                    <a href="../img/lab1/image3.png" target="_blank"><img src="../img/lab1/image3.png" alt="имя игры"></a>
+                    <a href="../img/lab1/image3.png" target="_blank"><img src="../img/lab1/image3.png"
+                            alt="имя игры"></a>
                 </p>
                 <p>
-                    5. Меняем цвета объекта <b>Main Camera</b>  (нажимаем на него в <b>Hierarchy</b>, и в <b>Inspector</b> появляются свойства объекта) на тот который вам нравится, и также меняем размер, в нашем случае возьмём 15 (указывает на область, которую видит наша камера, и мы отдалим наш zoom на кратное пяти число, для более удобных расчётов в будущем):
+                    5. Меняем цвета объекта <b>Main Camera</b> (нажимаем на него в <b>Hierarchy</b>, и в
+                    <b>Inspector</b> появляются свойства объекта) на тот который вам нравится, и также меняем размер, в
+                    нашем случае возьмём <b>15</b> (указывает на область, которую видит наша камера, и мы отдалим наш
+                    zoom на кратное пяти число, для более удобных расчётов в будущем):
                 </p>
                 <p>
-                    <a href="../img/lab1/image4.png" target="_blank"><img src="../img/lab1/image4.png" alt="Main Camera"></a>
+                    <a href="../img/lab1/image4.png" target="_blank"><img src="../img/lab1/image4.png"
+                            alt="Main Camera"></a>
                 </p>
                 <p>
-                    <a href="../img/lab1/image5.png" target="_blank"><img src="../img/lab1/image5.png" alt="Main Camera"></a>
+                    <a href="../img/lab1/image5.png" target="_blank"><img src="../img/lab1/image5.png"
+                            alt="Main Camera"></a>
                 </p>
                 <p>
-                    6. Щёлкаем правой кнопкой мыши в <b>Hierarchy -> 2D Object -> Sprites -> Square:</b> 
+                    6. Щёлкаем правой кнопкой мыши в <b>Hierarchy -> 2D Object -> Sprites -> Square:</b>
                 </p>
                 <p>
                     <a href="../img/lab1/image6.png" target="_blank"><img src="../img/lab1/image6.png" alt="Square"></a>
+                </p>
+                <p>
+                    7. В Inspector сбрасываем для нашего объекта трансформацию (не забудьте, что объект должен быть
+                    выделен):
+                </p>
+                <p>
+                    <a href="../img/lab1/image7.png" target="_blank"><img src="../img/lab1/image7.png" alt=""></a>
+                </p>
+                <p>
+                    Меняем название на <b>Snake:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image8.png" target="_blank"><img src="../img/lab1/image8.png" alt=""></a>
+                </p>
+                <p>
+                    Меняем цвет змейки (например, зеленый):
+                </p>
+                <p>
+                    <a href="../img/lab1/image9.png" target="_blank"><img src="../img/lab1/image9.png" alt=""></a>
+                </p>
+                <p>
+                    8. Добавляем два компонента, нажав на <b>Add Component - Box Collider 2D и Rigidbody 2D:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image10.png" target="_blank"><img src="../img/lab1/image10.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image11.png" target="_blank"><img src="../img/lab1/image11.png" alt=""></a>
+                </p>
+                <p>
+                    <b>Rigidbody 2D</b> – Добавление компонента (класса) Rigidbody2D к спрайту передает его под контроль
+                    физического движка. Само по себе это означает, что на спрайт будет воздействовать сила тяжести, и им
+                    можно управлять из скриптов с помощью сил. При добавлении соответствующего компонента collider
+                    спрайт также будет реагировать на столкновения с другими спрайтами.
+                </p>
+                <p>
+                    <b>Box Collider 2D</b> – Коллайдер для 2D-физики, представляющий собой прямоугольник, выровненный по
+                    оси, влияет на столкновение объектов.
+                </p>
+                <p>
+                    Так как игра у нас простая, нам не нужны такие параметры как масса, гравитация и др., поэтому меняем
+                    <b>Body Type на Kinematic:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image12.png" target="_blank"><img src="../img/lab1/image12.png" alt=""></a>
+                </p>
+                <p>
+                    У <b>Box Collider 2D</b> изменим размер на <b>0.75</b> (чтобы при соприкосновении с собой игра не
+                    завершалась, или еда, которую мы позже добавим, не исчезала при касании боком):
+                </p>
+                <p>
+                    <a href="../img/lab1/image13.png" target="_blank"><img src="../img/lab1/image13.png" alt=""></a>
+                </p>
+                <p>
+                    9. Ставим галочку <b>Is Trigger</b> (триггеры не вызывают физических столкновений, но используются
+                    для обнаружения определённых событий или реализации игровой механики.):
+                </p>
+                <p>
+                    <a href="../img/lab1/image14.png" target="_blank"><img src="../img/lab1/image14.png" alt=""></a>
+                </p>
+                <p>
+                    10. Создаём новый 2D объект:
+                </p>
+                <p>
+                    <a href="../img/lab1/image15.png" target="_blank"><img src="../img/lab1/image15.png" alt=""></a>
+                </p>
+                <p>
+                    Называем его <b>Food:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image16.png" target="_blank"><img src="../img/lab1/image16.png" alt=""></a>
+                </p>
+                <p>
+                    Сбрасываем трансформацию:
+                </p>
+                <p>
+                    <a href="../img/lab1/image17.png" target="_blank"><img src="../img/lab1/image17.png" alt=""></a>
+                </p>
+                <p>
+                    И перенесём немного в сторону от еды:
+                </p>
+                <p>
+                    <a href="../img/lab1/image18.png" target="_blank"><img src="../img/lab1/image18.png" alt=""></a>
+                </p>
+                <p>
+                    Меняем цвет (например, красный):
+                </p>
+                <p>
+                    <a href="../img/lab1/image19.png" target="_blank"><img src="../img/lab1/image19.png" alt=""></a>
+                </p>
+                <p>
+                    Добавляем <b>Box Collider 2D</b> (ставим галочку <b>Is Trigger</b> и меняем размер на <b>0.75</b>):
+                </p>
+                <p>
+                    <a href="../img/lab1/image20.png" target="_blank"><img src="../img/lab1/image20.png" alt=""></a>
+                </p>
+                <p>
+                    11. Создадим стены:
+                </p>
+                <p>
+                    <a href="../img/lab1/image21.png" target="_blank"><img src="../img/lab1/image21.png" alt=""></a>
+                </p>
+                <p>
+                    Меняем название и сбрасываем трансформацию:
+                </p>
+                <p>
+                    <a href="../img/lab1/image22.png" target="_blank"><img src="../img/lab1/image22.png" alt=""></a>
+                </p>
+                <p>
+                    Меняем цвет:
+                </p>
+                <p>
+                    <a href="../img/lab1/image23.png" target="_blank"><img src="../img/lab1/image23.png" alt=""></a>
+                </p>
+                <p>
+                    12. Передвигаем влево <b>position</b> и увеличиваем размер <b>scale</b> (убедитесь, что у вас целые
+                    числа):
+                </p>
+                <p>
+                    <a href="../img/lab1/image24.png" target="_blank"><img src="../img/lab1/image24.png" alt=""></a>
+                </p>
+                <p>
+                    Добавляем <b>Box Collider 2D</b> (ставим галочку <b>Is Trigger</b>):
+                </p>
+                <p>
+                    <a href="../img/lab1/image25.png" target="_blank"><img src="../img/lab1/image25.png" alt=""></a>
+                </p>
+                <p>
+                    13. Далее создаём дубликаты наших стен, и меняем для них позицию и размер, чтобы получилось
+                    следующим образом:
+                </p>
+                <p>
+                    <a href="../img/lab1/image26.png" target="_blank"><img src="../img/lab1/image26.png" alt=""></a>
+                </p>
+                <p>
+                    14. В папке Assets создаём папку <b>Scripts</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image27.png" target="_blank"><img src="../img/lab1/image27.png" alt=""></a>
+                </p>
+                <p>
+                    В ней создаём скрипт (щёлкаем правой кнопкой мыши) и называем Snake:
+                </p>
+                <p>
+                    <a href="../img/lab1/image28.png" target="_blank"><img src="../img/lab1/image28.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image29.png" target="_blank"><img src="../img/lab1/image29.png" alt=""></a>
+                </p>
+                <p>
+                    Чтобы проверить какая программа открывает скрипты нужно перейти в <b>Edit -> Preferences -> External
+                        Tools -> External Script Editor:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image30.png" target="_blank"><img src="../img/lab1/image30.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image31.png" target="_blank"><img src="../img/lab1/image31.png" alt=""></a>
+                </p>
+                <p>
+                    После нам надо перетащить скрипт на объект Snake:
+                </p>
+                <p>
+                    <a href="../img/lab1/image32.png" target="_blank"><img src="../img/lab1/image32.png" alt=""></a>
+                </p>
+                <p>
+                    15. Щёлкаем дважды на скрипт <b>Snake</b>, и он откроется в вашей IDE:
+                </p>
+                <p>
+                    <a href="../img/lab1/image33.png" target="_blank"><img src="../img/lab1/image33.png" alt=""></a>
+                </p>
+                <p>
+                    Можно удалить неиспользуемые строчки кода (подсвечиваются серыми), а также всё что находится внутри
+                    класса, т.к. обычно пишут с 0. В итоге скрипт будет выглядеть так:
+                </p>
+                <p>
+                    <a href="../img/lab1/image35.png" target="_blank"><img src="../img/lab1/image34.png" alt=""></a>
+                </p>
+                <p>
+                    Пишем следующий код:
+                </p>
+                <p>
+                    <a href="../img/lab1/code1.png" target="_blank"><img src="../img/lab1/code1.png" alt=""></a>
+                </p>
+                <p>
+                    16. Для передвижения нашей змейки нам нужно объявить переменную:
+                </p>
+                <p>
+                    <a href="../img/lab1/code2.png" target="_blank"><img src="../img/lab1/code2.png" alt=""></a>
+                </p>
+                <p>
+                    Затем нам нужно добавить метод Update:
+                </p>
+                <p>
+                    <a href="../img/lab1/code3.png" target="_blank"><img src="../img/lab1/code3.png" alt=""></a>
+                </p>
+                <p>
+                    После нам нужно задать направление движения, которые вводит пользователь:
+                </p>
+                <p>
+                    <a href="../img/lab1/code4.png" target="_blank"><img src="../img/lab1/code4.png" alt=""></a>
+                </p>
+                <p>
+                    Теперь нам для изменения движения змейки нужно исходя из нашего направления изменить положение змейки. Это делается с помощью метода <b>FixedUpdate()</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/code5.png" target="_blank"><img src="../img/lab1/code5.png" alt=""></a>
+                </p>
+                <p>
+                    Проверяем что всё работает в игре:
+                </p>
+                <p>
+                    <a href="../img/lab1/image35.png" target="_blank"><img src="../img/lab1/image35.png" alt=""></a>
+                </p>
+                <p>
+                    Давайте немного отрегулируем скорость движения змейки. Переходим в <b>Edit -> Project Settings -> Time -> Fixed Timestep</b>. Поменяем на <b>0.04</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image36.png" target="_blank"><img src="../img/lab1/image36.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image37.png" target="_blank"><img src="../img/lab1/image37.png" alt=""></a>
+                </p>
+                <p>
+                    17. Теперь займёмся нашей едой. Чтобы она рандомно появлялась на нашем игровом поле, нам нужно
+                    создать с вами новый объект, который не будет выходить за пределы стен.
+                </p>
+                <p>
+                    Нажимаем правой кнопкой мыши в нашей <b>Hierarchy -> Create Empty</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image38.png" target="_blank"><img src="../img/lab1/image38.png" alt=""></a>
+                </p>
+                <p>
+                    <b>Reset:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image39.png" target="_blank"><img src="../img/lab1/image39.png" alt=""></a>
+                </p>
+                <p>
+                    Добавляем <b>Box Collider 2D:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image40.png" target="_blank"><img src="../img/lab1/image40.png" alt=""></a>
+                </p>
+                <p>
+                    Помеяем <b>Is Trigger:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image41.png" target="_blank"><img src="../img/lab1/image41.png" alt=""></a>
+                </p>
+                <p>
+                    Называем <b>GridArea:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image42.png" target="_blank"><img src="../img/lab1/image42.png" alt=""></a>
+                </p>
+                <p>
+                    Настроим размер <b>Box Collider 2D</b> чтобы он не касался границ наших стен (в моём случае это <b>х = 50 и у = 28</b>):
+                </p>
+                <p>
+                    <a href="../img/lab1/image43.png" target="_blank"><img src="../img/lab1/image43.png" alt=""></a>
+                </p>
+                <p>
+                    18. Создаём скрипт с именем <b>Food</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image44.png" target="_blank"><img src="../img/lab1/image44.png" alt=""></a>
+                </p>
+                <p>
+                    И добавляем его к еде (нажимаем на объект <b>Food</b> и переносим на него скрипт, чтобы он у нас отображался):
+                </p>
+                <p>
+                    <a href="../img/lab1/image45.png" target="_blank"><img src="../img/lab1/image45.png" alt=""></a>
+                </p>
+                <p>
+                    Открываем его.
+                </p>
+                <p>
+                    Удаляем ненужные строки кода:
+                </p>
+                <p>
+                    <a href="../img/lab1/image46.png" target="_blank"><img src="../img/lab1/image46.png" alt=""></a>
+                </p>
+                <p>
+                    Объявляем публичное поле <b>GridArea:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/code6.png" target="_blank"><img src="../img/lab1/code6.png" alt=""></a>
+                </p>
+                <p>
+                    Затем нам нужно перенести объект <b>GridArea</b> в поле скрипта:
+                </p>
+                <p>
+                    <a href="../img/lab1/image47.png" target="_blank"><img src="../img/lab1/image47.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image48.png" target="_blank"><img src="../img/lab1/image48.png" alt=""></a>
+                </p>
+                <p>
+                    19. Напишем метод, который будет случайным образом задавать позицию нашей еды в пределах области <b>GridArea:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/code7.png" target="_blank"><img src="../img/lab1/code7.png" alt=""></a>
+                </p>
+                <p>
+                    Добавим вызов объекта, при начале игры:
+                </p>
+                <p>
+                    <a href="../img/lab1/code8.png" target="_blank"><img src="../img/lab1/code8.png" alt=""></a>
+                </p>
+                <p>
+                    Сделаем так, чтобы при съедании еды она будет пропадать и появляться в новом месте. Поставим для змейки тег <b>Player</b> чтобы по нему сверять столкновение с едой:
+                </p>
+                <p>
+                    <a href="../img/lab1/image49.png" target="_blank"><img src="../img/lab1/image49.png" alt=""></a>
+                </p>
+                <p>
+                    Затем напишем код:
+                </p>
+                <p>
+                    <a href="../img/lab1/code9.png" target="_blank"><img src="../img/lab1/code9.png" alt=""></a>
+                </p>
+                <p>
+                    В итоге полностью готовый скрипт на еду будет выглядеть следующим образом:
+                </p>
+                <p>
+                    <a href="../img/lab1/image50.png" target="_blank"><img src="../img/lab1/image50.png" alt=""></a>
+                </p>
+                <p>
+                    20. Добавим новый тег <b>Food</b> для нашего объекта – еды:
+                </p>
+                <p>
+                    <a href="../img/lab1/image51.png" target="_blank"><img src="../img/lab1/image51.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image52.png" target="_blank"><img src="../img/lab1/image52.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image53.png" target="_blank"><img src="../img/lab1/image53.png" alt=""></a>
+                </p>
+                <p>
+                    Добавим новый тег <b>Obstacle</b> для наших объектов – препятствий:
+                </p>
+                <p>
+                    <a href="../img/lab1/image54.png" target="_blank"><img src="../img/lab1/image54.png" alt=""></a>
+                </p>
+                <p>
+                    И не забудем их выбрать (<b>для каждой стены и для Food</b>)!
+                </p>
+                <p>
+                    <a href="../img/lab1/image55.png" target="_blank"><img src="../img/lab1/image55.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image56.png" target="_blank"><img src="../img/lab1/image56.png" alt=""></a>
+                </p>
+                <p>
+                    21. Теперь добавим отображение очков в нашу игру.
+                </p>
+                <p>
+                    Щёлкаем правой кнопкой мыши в иерархии и добавляем <b>UI – Text - TextMeshPro</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image57.png" target="_blank"><img src="../img/lab1/image57.png" alt=""></a>
+                </p>
+                <p>
+                    В <b>Inspector</b> для <b>Canvas</b> выбираем в модели рендера Screen Space-Camera:
+                </p>
+                <p>
+                    <a href="../img/lab1/image58.png" target="_blank"><img src="../img/lab1/image58.png" alt=""></a>
+                </p>
+                <p>
+                    Переносим <b>Main Camera</b> в рендер:
+                </p>
+                <p>
+                    <a href="../img/lab1/image59.png" target="_blank"><img src="../img/lab1/image59.png" alt=""></a>
+                </p>
+                <p>
+                    Подгоняем размер текста, под нашу игровую область. Меняем размер шрифта, цвет и текст на <b>Score:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image60.png" target="_blank"><img src="../img/lab1/image60.png" alt=""></a>
+                </p>
+                <p>
+                    22. Переходим в скрипт Snake. Подключаем пространство имен для работы с <b>UI</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/code10a.png" target="_blank"><img src="../img/lab1/code10a.png" alt=""></a>
+                </p>
+                <p>
+                    Объявим переменную и добавим ссылку на Объявим переменную и добавим ссылку на <b>UI</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/code10b.png" target="_blank"><img src="../img/lab1/code10b.png" alt=""></a>
+                </p>
+                <p>
+                    Затем перенесём в <b>Unity</b> в переменную <b>Score Text</b> наш текст:
+                </p>
+                <p>
+                    <a href="../img/lab1/image61.png" target="_blank"><img src="../img/lab1/image61.png" alt=""></a>
+                </p>
+                <p>
+                    Пропишем в самом конце новый метод <b>UpdateScoreText</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/code10.png" target="_blank"><img src="../img/lab1/code10.png" alt=""></a>
+                </p>
+                <p>
+                    23. Напишем метод для сброса игры:
+                </p>
+                <p>
+                    <a href="../img/lab1/code11.png" target="_blank"><img src="../img/lab1/code11.png" alt=""></a>
+                </p>
+                <p>
+                    И пропишем метод для проверки столкновения с тегом еды и препятствиями:
+                </p>
+                <p>
+                    <a href="../img/lab1/code12.png" target="_blank"><img src="../img/lab1/code12.png" alt=""></a>
+                </p>
+                <p>
+                    24. Теперь сделаем увеличение сегментов змейки. Для этого возвращаемся в скрипт со змейкой
+                    (<b>Snake.cs</b>)
+                </p>
+                <p>
+                    Для начала подключим коллекции в начале скрипта:
+                </p>
+                <p>
+                    <a href="../img/lab1/code13.png" target="_blank"><img src="../img/lab1/code13.png" alt=""></a>
+                </p>
+                <p>
+                    Создаём приватное поле для наших сегментов:
+                </p>
+                <p>
+                    <a href="../img/lab1/code14.png" target="_blank"><img src="../img/lab1/code14.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image63.png" target="_blank"><img src="../img/lab1/image63.png" alt=""></a>
+                </p>
+                <p>
+                    Создадим метод <b>Start</b>, вызывающийся при запуске игры. Инициализируем список и добавим первый сегмент (голову змейки):
+                </p>
+                <p>
+                    <a href="../img/lab1/code15.png" target="_blank"><img src="../img/lab1/code15.png" alt=""></a>
+                </p>
+                <p>
+                    25. Теперь нам нужно создать новый объект – <b>Prefab</b>.
+                </p>
+                <p>
+                    <b>Prefab</b> - это шаблон для объекта в игровом движке Unity. С помощью префабов можно создать «образец» предмета с определенными свойствами, а потом использовать такие предметы на всей игровой сцене. Если изменить префаб, то изменятся все объекты, созданные на его основе.
+                </p>
+                <p>
+                    Для этого выбираем наш объект <b>Snake</b> и нажимаем <b>Ctrl+D</b>, чтобы сделать его дубликат и называем его <b>SnakeSegment</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image64.png" target="_blank"><img src="../img/lab1/image64.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image65.png" target="_blank"><img src="../img/lab1/image65.png" alt=""></a>
+                </p>
+                <p>
+                    У <b>SnakeSegment</b> удаляем <b>Rigidbody 2D и скрипт</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image66.png" target="_blank"><img src="../img/lab1/image66.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image67.png" target="_blank"><img src="../img/lab1/image67.png" alt=""></a>
+                </p>
+                <p>
+                    Перетаскиваем <b>SnakeSegment</b> в наши <b>Assets</b> (в итоге он появится как новый тип объекта и будет иметь расширение <b>.prefab</b>):
+                </p>
+                <p>
+                    <a href="../img/lab1/image68.png" target="_blank"><img src="../img/lab1/image68.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image69.png" target="_blank"><img src="../img/lab1/image69.png" alt=""></a>
+                </p>
+                <p>
+                    После удаляем объект из нашей иерархии:
+                </p>
+                <p>
+                    <a href="../img/lab1/image70.png" target="_blank"><img src="../img/lab1/image70.png" alt=""></a>
+                </p>
+                <p>
+                    26. Возвращаемся в наш скрипт. Создадим публичное поле для нашего префаба:
+                </p>
+                <p>
+                    <a href="../img/lab1/code16.png" target="_blank"><img src="../img/lab1/code16.png" alt=""></a>
+                </p>
+                <p>
+                    Перетаскиваем наш префаб в поле <b>Snake</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image72.png" target="_blank"><img src="../img/lab1/image72.png" alt=""></a>
+                </p>
+                <p>
+                    <a href="../img/lab1/image73.png" target="_blank"><img src="../img/lab1/image73.png" alt=""></a>
+                </p>
+                <p>
+                    Далее создадим новый метод <b>Grow</b>, который будет добавлять сегменты к змейке:
+                </p>
+                <p>
+                    <a href="../img/lab1/code17.png" target="_blank"><img src="../img/lab1/code17.png" alt=""></a>
+                </p>
+                <p>
+                    27. Затем добавим в метод <b>OnTriggerEnter2D</b> вызов метода <b>Grow</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image74.png" target="_blank"><img src="../img/lab1/image74.png" alt=""></a>
+                </p>
+                <p>
+                    28. Если запустить игру, то может показаться странным, что сегменты вроде как не добавляются, но на
+                    самом деле они появляются, в этом можно убедиться при столкновении с едой глянув в иерархию мы
+                    увидим новые префабы:
+                </p>
+                <p>
+                    <a href="../img/lab1/image75.png" target="_blank"><img src="../img/lab1/image75.png" alt=""></a>
+                </p>
+                <p>
+                    Решим эту проблему, для этого добавим цикл перемещения сегментов змейки на позицию предыдущего в
+                    начало метода <b>FixedUpdate</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image76.png" target="_blank"><img src="../img/lab1/image76.png" alt=""></a>
+                </p>
+                <p>
+                    Для лучшей визуализации, поменяем у префаба размеры на <b>0.9:</b>
+                </p>
+                <p>
+                    <a href="../img/lab1/image77.png" target="_blank"><img src="../img/lab1/image77.png" alt=""></a>
+                </p>
+                <p>
+                    29. Теперь нам нужно дописать метод <b>ResetGame</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/code19.png" target="_blank"><img src="../img/lab1/code19.png" alt=""></a>
+                </p>
+                <p>
+                    Затем добавим в наш метод <b>OnTriggerEnter2D</b> условие для вызова метода:
+                </p>
+                <p>
+                    <a href="../img/lab1/code20.png" target="_blank"><img src="../img/lab1/code20.png" alt=""></a>
+                </p>
+                <p style="text-align: center; color: red;">
+                    <b>Рефакторинг</b>
+                </p>
+                <p>
+                    30. Теперь решим проблему возможности змейки двигаться в противоположном направлении. Для этого
+                    немного изменим код в методе <b>Update</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/code21.png" target="_blank"><img src="../img/lab1/code21.png" alt=""></a>
+                </p>
+                <p>
+                    31. При столкновении змейки с самой собой, будем вызывать перезагрузку уровня. Для этого добавим в
+                    <b>FixedUpdate</b> проверку:
+                </p>
+                <p>
+                    <a href="../img/lab1/code22.png" target="_blank"><img src="../img/lab1/code22.png" alt=""></a>
+                </p>
+                <p>
+                    32. Давайте добавим возможности выходить из игры по нажатию клавиши <b>ESC</b>. Для этого допишем в
+                    методе <b>Update</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image78.png" target="_blank"><img src="../img/lab1/image78.png" alt=""></a>
+                </p>
+                <p>
+                    33. Разделим в методе <b>FixedUpdate</b> код на 3 метода:
+                </p>
+                <p>
+                    <a href="../img/lab1/image79.png" target="_blank"><img src="../img/lab1/image79.png" alt=""></a>
+                </p>
+                <p>
+                    Сами методы:
+                </p>
+                <p>
+                    <a href="../img/lab1/image80.png" target="_blank"><img src="../img/lab1/image80.png" alt=""></a>
+                </p>
+                <p>
+                    34. Можно переписать обработку ввода через конструкцию switch, и вынести её отдельным методом:
+                </p>
+                <p>
+                    <a href="../img/lab1/image81.png" target="_blank"><img src="../img/lab1/image81.png" alt=""></a>
+                </p>
+                <p>
+                    Код:
+                </p>
+                <p>
+                    <a href="../img/lab1/code24.png" target="_blank"><img src="../img/lab1/code24.png" alt=""></a>
+                </p>
+                <p>
+                    35. Для увеличения скорости змейки по мере набора очков мы можем увеличить параметр <b>Time.fixedDeltaTime в Unity</b>. Этот параметр управляет тем, как часто вызывается <b>FixedUpdate</b> и тем самым влияет на скорость игры.
+                </p>
+                <p>
+                    Добавляем инициализацию начальной скорости для <b>fixedDeltaTime</b> и переменную для увеличения скорости:
+                </p>
+                <p>
+                    <a href="../img/lab1/image82.png" target="_blank"><img src="../img/lab1/image82.png" alt=""></a>
+                </p>
+                <p>
+                    Сохраняем начальное значение <b>Time.fixedDeltaTime</b>, чтобы можно было сбросить его при перезапуске игры:
+                </p>
+                <p>
+                    <a href="../img/lab1/image83.png" target="_blank"><img src="../img/lab1/image83.png" alt=""></a>
+                </p>
+                <p>
+                    Увеличиваем скорость в <b>OnTriggerEnter2D</b> при сборе еды:
+                </p>
+                <p>
+                    <a href="../img/lab1/image84.png" target="_blank"><img src="../img/lab1/image84.png" alt=""></a>
+                </p>
+                <p>
+                    Сбрасываем скорость до начального значения при перезапуске игры в <b>ResetGame</b>: 
+                </p>
+                <p>
+                    <a href="../img/lab1/image85.png" target="_blank"><img src="../img/lab1/image85.png" alt=""></a>
+                </p>
+                <p style="text-align: center; color: red;">
+                    <b>36. Бонус! Выход за пределы экрана.</b>
+                </p>
+                <p>
+                    Чтобы сделать так, чтобы объекты, выходящие за границы экрана, появлялись с противоположной стороны, можно использовать функцию ограничения координат в пределах экрана. Сделать это можно, проверяя позицию игрока в методе FixedUpdate и изменяя её, если она выходит за пределы экрана.
+                </p>
+                <p>
+                    Напишем метод <b>WrapAroundScreen</b>, он будет проверять, выходит ли змейка за границы экрана, и перемещает её на противоположную сторону, если это происходит:
+                </p>
+                <p>
+                    <a href="../img/lab1/code25.png" target="_blank"><img src="../img/lab1/code25.png" alt=""></a>
+                </p>
+                <p>
+                    Добавим его вызов в <b>FixedUpdate</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image86.png" target="_blank"><img src="../img/lab1/image86.png" alt=""></a>
+                </p>
+                <p>
+                    Удалим проверку на столкновение со стенами:
+                </p>
+                <p>
+                    <a href="../img/lab1/image87.png" target="_blank"><img src="../img/lab1/image87.png" alt=""></a>
+                </p>
+                <p>
+                    35. Осталось только скомпилировать нашу игру. Переходим в <b>File – Build And Run</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image88.png" target="_blank"><img src="../img/lab1/image88.png" alt=""></a>
+                </p>
+                <p>
+                    Выбираете любую папку куда хотите сохранить игру, или создаёте новую папку:
+                </p>
+                <p>
+                    <a href="../img/lab1/image89.png" target="_blank"><img src="../img/lab1/image89.png" alt=""></a>
+                </p>
+                <p>
+                    После можете запустить игру через <b>.exe</b>:
+                </p>
+                <p>
+                    <a href="../img/lab1/image90.png" target="_blank"><img src="../img/lab1/image90.png" alt=""></a>
                 </p>
             </article>
 
