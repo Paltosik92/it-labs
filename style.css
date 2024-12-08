@@ -53,16 +53,19 @@ footer {
 
 #welcome {
     text-align: center;
+    font-size: 16pt;
 }
 
 /* about */
 #about {
     padding: 2em;
     text-align: justify;
+    font-size: 16pt;
 }
 
 #about h2 {
     color: #4CAF50;
+    text-align: center;
 }
 
 #about ul {
@@ -72,46 +75,6 @@ footer {
 
 #about ul li {
     margin-bottom: 0.5em;
-}
-
-/* contact */
-#contact {
-    padding: 2em;
-    text-align: left;
-}
-
-#contact h2 {
-    color: #4CAF50;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-#contact label {
-    font-weight: bold;
-}
-
-#contact input,
-#contact textarea {
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contact button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#contact button:hover {
-    background-color: #45a049;
 }
 
 /* labs */
