@@ -19,6 +19,7 @@ nav ul {
     justify-content: center;
     background-color: #333;
     flex-wrap: wrap; /* Добавлено для адаптивности */
+    flex-direction: column;
 }
 
 nav ul li {
