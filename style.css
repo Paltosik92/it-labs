@@ -38,6 +38,8 @@ nav ul li a:hover {
 }
 
 main {
+    display: flex; 
+    flex-direction: column;
     padding: 2em;
 }
 
@@ -57,7 +59,7 @@ footer {
 }
 
 /* about */
-#about {
+#about {   
     padding: 2em;
     text-align: center;
     font-size: 16pt;
