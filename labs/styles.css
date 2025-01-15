@@ -112,6 +112,16 @@ footer {
     width: 100%;
 }
 
+table, td, th {
+    font-size: 10pt;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    text-align: center;
+}
+td{
+    padding: 0.5em;
+}
+
 /* Медиазапросы для адаптивности */
 @media (min-width: 768px) {
     main {
