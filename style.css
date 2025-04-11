@@ -138,7 +138,7 @@ section {
 }
 
 h2 {
-    color: var(--primary);
+    color: var(--primary);   
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid var(--secondary);
@@ -222,16 +222,27 @@ footer p {
 /* Карточка контактов */
 .contact-card {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
     align-items: center;
+    padding: 1rem;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .avatar {
-    width: 160px;
-    height: 210px;
+    width: 140px;
+    height: 180px;
+    max-width: 100%;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--secondary);
+}
+
+.contact-info {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 .contact-info h3 {
@@ -239,13 +250,21 @@ footer p {
     color: var(--primary);
 }
 
+.contact-details {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
 .contact-details p {
     margin: 1rem 0;
+    word-break: break-word;
 }
 
 .contact-details strong {
     display: inline-block;
-    min-width: 20px;
+    min-width: auto;
+    margin-right: 0.5rem;
 }
 
 /* ===== Адаптив ===== */
@@ -277,6 +296,16 @@ footer p {
         font-size: 1rem;
     }
 
+    .contact-info {
+        padding: 0 0.5rem;
+        /* Уменьшаем отступы */
+    }
+
+    .contact-details p,h2 {
+        text-align: center;
+        /* Центрируем текст */
+    }
+
     .dropdown-menu {
         position: static;
         box-shadow: none;
@@ -291,5 +320,18 @@ footer p {
     .dropdown-menu li a:hover {
         background-color: rgba(255, 255, 255, 0.15);
         color: #fff;
+    }
+
+    /* Для очень маленьких экранов */
+    @media (max-width: 480px) {
+        .avatar {
+            width: 100px;
+            height: 140px;
+        }
+
+        .contact-details p {
+            font-size: 0.9rem;
+            /* Чуть уменьшаем шрифт */
+        }
     }
 }
