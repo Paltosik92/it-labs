@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты | IT-лаборатория</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>IT-лаборатория</h1>
+            <p class="tagline">Образовательные материалы для студентов</p>
+            
+            <button class="menu-toggle" aria-label="Открыть меню">&#9776;</button>
+            
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Программирование</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">C#</a></li>
+                            <li><a href="#">Kotlin</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Геймдев</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="labs/gamedev/unity/index.html">Unity</a></li>
+                            <li><a href="#">Blender</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Мобильная разработка</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Android Studio</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Информатика</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">ПР</a></li>
+                            <li><a href="#">ПМИ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="contacts">
+                <h2>Контактная информация</h2>
+                
+                <div class="contact-card">
+                    <img src="images/leontev_denis.jpg" alt="Фото Леонтьев Денис" class="avatar">
+                    <div class="contact-info">
+                        <h3>Леонтьев Денис</h3>
+                        <p>Программист, преподаватель, разработчик учебных материалов</p>
+                        
+                        <div class="contact-details">
+                            <p><strong>Email:</strong> <a href="mailto:denis.leontev92@yandex.ru">denis.leontev92@yandex.ru</a></p>
+                            <p><strong>Расписание консультаций:</strong> Пн-Чт, 16:00-17:00, ауд. 3-10</p>
+                            <p><strong>Место работы:</strong> Волжский филиал ФГАОУ ВО «Волгоградский государственный университет»</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 IT-лаборатория. Все права защищены.</p>
+            <p>Образовательные материалы для студентов</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,32 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Лабораторные работы</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
     <header>
-        <h1>Unity<br>Лабораторные работы</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="labs.html">Лабораторные работы</a></li>
-                <li><a href="about.html">Контакты</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>IT-лаборатория</h1>
+            <p class="tagline">Образовательные материалы для студентов</p>
+
+            <!-- Кнопка для мобильного меню -->
+            <button class="menu-toggle" aria-label="Открыть меню">&#9776;</button>
+
+            <!-- Навигация -->
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Программирование</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">C#</a></li>
+                            <li><a href="#">Kotlin</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Геймдев</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="labs/gamedev/unity/index.html">Unity</a></li>
+                            <li><a href="#">Blender</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Мобильная разработка</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Android Studio</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Информатика</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">ПР</a></li>
+                            <li><a href="#">ПМИ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
         <section id="welcome">
             <h2>Добро пожаловать!</h2>
-            <p>На этом сайте вы найдёте лабораторные работы по <b>Unity</b> подготовленные для студентов Университетского колледжа, направления подготовки 09.02.07 "Информационные системы и программирование".</p>
-            <p>Материал можно использовать в образовательных целях. Коммерческое использование или выдача за свою работу запрещены.</p>
+            <p>&nbsp;&nbsp;Этот образовательный ресурс содержит лабораторные работы для студентов различных направлений подготовки.</p>
+
+            <div class="specialties">
+                <div class="specialty-card">
+                    <h3>09.02.07 "Информационные системы и программирование"</h3>
+                    <ul>
+                        <li>Игровая разработка (C#, Unity)</li>
+                        <li>3D-моделирование (Blender)</li>
+                        <li>Мобильная разработка (Kotlin, Android Studio)</li>
+                    </ul>
+                </div>
+
+                <div class="specialty-card">
+                    <h3>05.03.06 "Экология и природопользование"</h3>
+                    <ul>
+                        <li>Информатика</li>
+                    </ul>
+
+                    <h3>01.03.02 "Прикладная математика и информатика"</h3>
+                    <ul>
+                        <li>Основы информатики</li>
+                    </ul>
+                </div>
+
+                <div class="notice">
+                    <p><strong>Важно:</strong> Материалы можно использовать только в образовательных целях. Коммерческое использование или выдача работ за свои собственные запрещены.</p>
+                </div>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p> © 2025. Лабораторные работы по Unity.<br> Все права защищены. </p>
+        <div class="container">
+            <p>&copy; 2025 IT-лаборатория. Все права защищены.</p>
+            <p>Образовательные материалы для студентов</p>
+        </div>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

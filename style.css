@@ -1,172 +1,295 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --text: #333;
+    --gray: #95a5a6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: #f9f9f9;
 }
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Шапка ===== */
 header {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
-    padding: 1em 0;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2.2rem;
     text-align: center;
+    margin-bottom: 0.5rem;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.tagline {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* ===== Кнопка меню (мобильная) ===== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* ===== Меню ===== */
+nav {
+    margin-top: 1rem;
+}
+
+.main-menu {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    background-color: #333;
+    gap: 1rem;
     flex-wrap: wrap;
-    /* Добавлено для адаптивности */
+    justify-content: center;
 }
 
-nav ul li {
-    margin: 0 1em;
+.main-menu li {
+    list-style-type: none;
+    position: relative;
 }
 
-nav ul li a {
+.main-menu a {
     color: white;
     text-decoration: none;
-    padding: 0.5em 1em;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Выпадающее меню ===== */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: white;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-menu li a {
+    color: var(--dark);
+    padding: 0.5rem 1.5rem;
+    background: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--light);
+    color: var(--primary);
+}
+
+/* Активное выпадающее меню */
+.dropdown.active .dropdown-menu {
     display: block;
 }
 
-nav ul li a:hover {
-    background-color: #111;
-}
-
+/* ===== Основной блок ===== */
 main {
-    display: flex; 
-    flex-direction: column;
-    padding: 2em;
+    padding: 2rem 0;
 }
 
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--secondary);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* ===== Карточки специальностей ===== */
+.specialties {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.specialty-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--secondary);
+    transition: transform 0.3s ease;
+}
+
+.specialty-card:hover {
+    transform: translateY(-3px);
+}
+
+.specialty-card h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.specialty-card ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.specialty-card li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.specialty-card li:before {
+    content: "•";
+    color: var(--secondary);
+    position: absolute;
+    left: 0;
+}
+
+/* ===== Уведомление ===== */
+.notice {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--accent);
+    padding: 1.2rem;
+    margin-top: 2rem;
+    border-radius: 0 4px 4px 0;
+    font-style: italic;
+}
+
+.notice strong {
+    color: var(--accent);
+}
+
+/* ===== Подвал ===== */
 footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #333;
+    background-color: var(--dark);
     color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-#welcome {
+    padding: 1.5rem 0;
     text-align: center;
-    font-size: 16pt;
+    margin-top: 2rem;
 }
 
-/* about */
-#about {   
-    padding: 2em;
-    text-align: center;
-    font-size: 16pt;
+footer p {
+    margin-bottom: 0.5rem;
 }
 
-#about h2 {
-    color: #4CAF50;
-    text-align: center;
+/* Карточка контактов */
+.contact-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 
-#about ul {
-    list-style-type: none;
-    padding: 0;
+.avatar {
+    width: 160px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary);
 }
 
-#about ul li {
-    margin-bottom: 0.5em;
+.contact-info h3 {
+    margin: 0 0 0.5rem;
+    color: var(--primary);
 }
 
-/* labs */
-aside {
-    width: 20%;
-    padding: 1em;
-    background-color: #f4f4f4;
-    border-right: 1px solid #ccc;
-    height: 100vh;
-    overflow-y: auto;
+.contact-details p {
+    margin: 1rem 0;
 }
 
-aside h2 {
-    color: #4CAF50;
-    font-size: 18px;
+.contact-details strong {
+    display: inline-block;
+    min-width: 20px;
 }
 
-aside ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-aside ul li {
-    margin-bottom: 1em;
-}
-
-aside ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-aside ul li a:hover {
-    text-decoration: underline;
-}
-
-section#content {
-    flex: 1;
-    padding: 2em;
-    overflow-y: auto;
-    text-align: center;
-}
-
-section#content article {
-    display: none;
-}
-
-section#content article h2 {
-    color: #4CAF50;
-}
-
-/* Медиазапросы для адаптивности */
+/* ===== Адаптив ===== */
 @media (max-width: 768px) {
-    nav ul {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-menu {
+        display: none;
         flex-direction: column;
-        /* Изменение направления на мобильных устройствах */
+        gap: 0;
+        background-color: var(--primary);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1rem;
+        margin-top: 1rem;
     }
 
-    aside {
-        width: 100%;
-        /* Изменение ширины для мобильных устройств */
-        height: auto;
-        border-right: none;
-        /* Убрать правую границу */
-        border-bottom: 1px solid #ccc;
-        /* Добавить нижнюю границу */
-    }
-
-    section#content {
-        margin-left: 0;
-        /* Убрать левый отступ */
-        margin-top: 1em;
-        /* Добавить верхний отступ */
-    }
-
-    footer {
-        position: relative;
-    }
-}
-
-@media (min-width: 769px) {
-    main {
+    .main-menu.open {
         display: flex;
     }
 
-    aside {
-        height: 100vh;
-        /* Вернуть исходную высоту для больших экранов */
+    .main-menu li {
+        width: 100%;
     }
 
-    footer {
-        position: fixed;
+    .main-menu a {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: var(--secondary);
+        padding-left: 1rem;
+    }
+
+    .dropdown-menu li a {
+        color: white;
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #fff;
     }
 }
