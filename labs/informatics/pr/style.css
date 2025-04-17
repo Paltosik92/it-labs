@@ -1,0 +1,40 @@
+/* Дополнительные стили специфичные для этой страницы */
+.labs-list {
+    margin-top: 2rem;
+}
+
+.lab-card {
+    background: white;
+    border-left: 4px solid var(--secondary);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.3s ease;
+}
+
+.lab-card:hover {
+    transform: translateX(5px);
+}
+
+.lab-title {
+    color: rgb(22, 171, 114);
+    margin-bottom: 0.5rem;
+}
+
+.lab-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.download-btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
