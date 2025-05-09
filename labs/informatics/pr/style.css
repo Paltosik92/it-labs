@@ -61,7 +61,7 @@
 }
 
 .download-btn:hover {
-    background: #23c6ab;
+    background: #116255;
     transform: scale(1.03);
-    box-shadow: 0 3px 10px rgba(6, 77, 64, 0.3);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
