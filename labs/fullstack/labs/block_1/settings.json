@@ -1,0 +1,145 @@
+{
+  // ======================================================
+  // Workbench / UI (внешний вид и поведение интерфейса)
+  // ======================================================
+  // Цветовая тема
+  "workbench.colorTheme": "One Dark Pro Night Flat",
+  // Тема иконок
+  "workbench.iconTheme": "material-icon-theme",
+  // Не открывать стартовую страницу или предыдущую сессию
+  "workbench.startupEditor": "none",
+  // Переместить Activity Bar наверх
+  "workbench.activityBar.location": "top",
+  // Уменьшенная высота вкладок редактора
+  "window.density.editorTabHeight": "compact",
+  // Отключить Command Center
+  "window.commandCenter": false,
+  // Масштаб всего интерфейса VS Code
+  "window.zoomLevel": 2,
+  // Не спрашивать подтверждение сохранения untitled workspace
+  "window.confirmSaveUntitledWorkspace": false,
+
+  // ======================================================
+  // Editor (редактор кода)
+  // ======================================================
+  // Шрифт редактора
+  "editor.fontFamily": "Fira code, fira-code-nerd, FiraCode Nerd Font, Consolas, 'Courier New', monospace",
+  // Лигатуры
+  "editor.fontLigatures": true,
+  // Размер шрифта
+  "editor.fontSize": 18,
+  // Перенос строк
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "none",
+  // Отключить боковое поле для глифов (ошибки, брейкпоинты)
+  "editor.glyphMargin": false,
+  // Отключить inline-подсказки (Copilot и аналоги)
+  "editor.inlineSuggest.enabled": false,
+  // Задержка hover-подсказок (мс)
+  "editor.hover.delay": 1500,
+  // Отключить миникарту
+  "editor.minimap.enabled": false,
+  // Форматировать файл при сохранении
+  "editor.formatOnSave": true,
+  // Tab completion
+  "editor.tabCompletion": "on",
+  // Не подсвечивать кириллицу и спецсимволы как "подозрительные"
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  // Разрешить русскую локаль
+  "editor.unicodeHighlight.allowedLocales": {
+    "ru": true
+  },
+  // Масштабирование текста колесом мыши
+  "editor.mouseWheelZoom": true,
+  // Форматтер по умолчанию
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Настройки Prettier
+  "prettier.printWidth": 140,
+  // Анимация курсора
+  "editor.cursorBlinking": "expand",
+  // Показывать пробелы и табы
+  "editor.renderWhitespace": "all",
+
+  // ======================================================
+  // Files / Explorer
+  // ======================================================
+  // Автосохранение после задержки
+  "files.autoSave": "afterDelay",
+  // Исключить папки из проводника
+  "files.exclude": {
+    "**/bin": true,
+    "**/obj": true
+  },
+  // Не спрашивать подтверждение при удалении
+  "explorer.confirmDelete": false,
+  // Не спрашивать подтверждение при drag & drop
+  "explorer.confirmDragAndDrop": false,
+  // Не спрашивать подтверждение при native paste
+  "explorer.confirmPasteNative": false,
+  // ======================================================
+  // Security
+  // ======================================================
+  // Автоматически открывать файлы из недоверенных workspace
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // ======================================================
+  // JSON
+  // ======================================================
+  // Очистка схем (кастомная конфигурация)
+  "json.schemas": [],
+
+  // ======================================================
+  // Git
+  // ======================================================
+  // Smart Commit (commit без staged файлов)
+  "git.enableSmartCommit": true,
+
+  // ======================================================
+  // Terminal
+  // ======================================================
+  // Терминал по умолчанию (Windows)
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  // Шрифт терминала
+  "terminal.integrated.fontFamily": "Fira code, fira-code-nerd, FiraCode Nerd Font, Consolas, 'Courier New', monospace",
+  // Размер шрифта терминала
+  "terminal.integrated.fontSize": 18,
+  // Масштабирование колесом мыши
+  "terminal.integrated.mouseWheelZoom": true,
+  // Отключить вкладки терминала
+  "terminal.integrated.tabs.enabled": false,
+  // Иконка вкладки терминала
+  "terminal.integrated.tabs.defaultIcon": "go-to-file",
+
+  // ======================================================
+  // Spell Checker
+  // ======================================================
+  "cSpell.language": "en,ru",
+  "cSpell.userWords": ["ENIAC", "UNIVAC"],
+
+  // ======================================================
+  // Extensions / Misc
+  // ======================================================
+  // Не проверять обновления расширений автоматически
+  "extensions.autoCheckUpdates": false,
+  // Dart / Flutter
+  "dart.flutterSdkPath": "/home/denis/Flutter/flutter",
+  // Live Server
+  "liveServer.settings.donotShowInfoMsg": true,
+  // Draw.io
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.appearance": "dark",
+  // Markdown Preview Enhanced
+  "markdown-preview-enhanced.enablePreviewZenMode": true,
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "markdown-preview-enhanced.codeBlockTheme": "github.css",
+
+  // ======================================================
+  // Языки
+  // ======================================================
+  // C#
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true
+  }
+}

@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT-лаборатория</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>IT-лаборатория</h1>
+        <p class="tagline">Образовательные материалы для студентов</p>
+
+        <!-- Кнопка для мобильного меню -->
+        <button class="menu-toggle" aria-label="Открыть меню">&#9776;</button>
+
+        <!-- Навигация -->
+        <nav>
+          <ul class="main-menu">
+            <li><a href="../../index.html">Главная</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Программирование</a>
+              <ul class="dropdown-menu">
+                <li><a href="../programming/csharp/index.html">C#</a></li>
+                <li><a href="../programming/kotlin/index.html">Kotlin</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Геймдев</a>
+              <ul class="dropdown-menu">
+                <li><a href="../gamedev/unity/index.html">Unity</a></li>
+                <li><a href="../gamedev/blender/index.html">Blender</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Разработка приложений</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Mobile development</a></li>
+                <li>
+                  <a href="../fullstack/index.html">Fullstack development</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Информатика и архитектура</a>
+              <ul class="dropdown-menu">
+                <li><a href="../../labs/informatics/pr/index.html">ПР</a></li>
+                <li><a href="../../labs/informatics/pmi/index.html">ПМИ</a></li>
+                <li>
+                  <a href="../../labs/informatics/architecture/index.html">Архитектура АС</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../../contacts.html" class="active">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>"Разработка мобильных приложений"</h2>
+
+      <div class="labs-list">
+        <!-- Установка -->
+        <div class="lab-card">
+          <h3 class="lab-title">Установка и первичная настройка Android Studio</h3>
+          <p>Разобраны основные моменты, касающиеся установки и первичной настройки Android Studio</p>
+          <a href="labs/Установка и настройка Android Studio.pdf" download class="download-btn">Скачать инструкцию (PDF)</a>
+        </div>
+        <!-- Настройка -->
+        <div class="lab-card">
+          <h3 class="lab-title">Настройка Android Studio</h3>
+          <p>Важные нюансы, которые касаются запрета обновлений, фиксирования версии пакетов и т.д.</p>
+          <a href="labs/Настройка Android Studio.pdf" download class="download-btn">Скачать инструкцию (PDF)</a>
+        </div>
+
+        <!-- Лекции -->
+        <div class="lab-card">
+          <h3 class="lab-title">Вводная лекция, 1 семестр</h3>
+          <p>Разобраны основные моменты, которые будут изучаться в рамках курса.</p>
+          <a href="labs/Вводная лекция по РМП.pdf" download class="download-btn">Скачать лекцию (PDF)</a>
+        </div>
+
+        <div class="lab-card">
+          <h3 class="lab-title">Вводная лекция, 2 семестр</h3>
+          <p>
+            Разобраны особенности и типы мобильных приложений. Основные компоненты Android (Activities , Services, Broadcast Receivers,
+            Content Providers).
+          </p>
+          <a href="labs/Вводная лекция по РМП, 2 семестр.pdf" download class="download-btn">Скачать лекцию (PDF)</a>
+        </div>
+
+        <h2>Android Studio</h2>
+
+        <!-- Лаба 1 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №1. Создание первого приложения в Android Studio</h3>
+          <p>
+            Цель: создать и запустить проект. Ознакомиться с интерфейсом Android Studio. Запустить эмулятор. Изучить структуру
+            Android-приложения. Изучить Modifier. Подключить реальное устройство.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №1.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+
+        <!-- Лаба 2 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №2. Создание приглашения для героя PixLetter: Часть I</h3>
+          <p>Цель: создать новый проект и ознакомиться с базовыми концепциями создания Android-приложения. Изучить Jetpack Compose.</p>
+          <a href="labs/Android Studio. Лабораторная работа №2.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+
+        <!-- Лаба 3 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №3. Создание приглашения для героя PixLetter: Часть II</h3>
+          <p>
+            Цель: доделать приложение. Ознакомиться с макетами элемента, добавлением изображения, границ и создании @Composable функций.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №3.pdf" download class="download-btn">Скачать работу (PDF)</a>
+          <a href="labs/PixelCasstle.png" download class="download-btn">Скачать доп.материал</a>
+        </div>
+
+        <!-- Лаба 4 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №4. Создание приложения Dice Roller</h3>
+          <p>
+            Цель: Создать интерактивное приложение Dice Roller, которое позволяет пользователям бросать игральные кости с помощью кнопки
+            Button.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №4.pdf" download class="download-btn">Скачать работу (PDF)</a>
+          <a href="labs/dice_images.zip" download class="download-btn">Скачать доп.материал</a>
+        </div>
+
+        <!-- Лаба 5 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №5. Jetpack Compose: контейнеры, ARGB-модель и Material Design</h3>
+          <p>
+            Цель: Повторить основы разработки пользовательского интерфейса на Jetpack Compose, работу с контейнерами Row и Column,
+            познакомиться с ARGB-моделью цветов, компонентом Scaffold и принципами Material Design.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №5.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+
+        <!-- Лаба 6-7 -->
+        <div class="lab-card">
+          <h3 class="lab-title">
+            Лабораторная работа №6-7. Взаимодействие с пользовательским интерфейсом и State (состоянием) в Jetpack Compose
+          </h3>
+          <p>
+            Цель: Познакомиться с понятием состояния (state) в Android-приложениях и научиться использовать его в интерфейсе с помощью
+            Jetpack Compose. В результате лабораторной работы будет создано приложение калькулятор чаевых (Tip Time), которое автоматически
+            рассчитывает сумму чаевых. Изучить автоматизированные тесты в Android.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №6-7.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+
+        <!-- Лаба 8 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №8. Создание приложения с прокручиваемым списком</h3>
+          <p>
+            Цель: Научиться создавать прокручиваемые списки в Android-приложениях с использованием Jetpack Compose. В результате
+            лабораторной работы будет создано приложение "Anime Catalog" (Каталог аниме), которое отображает список популярных аниме с
+            изображениями и описаниями.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №8.pdf" download class="download-btn">Скачать работу (PDF)</a>
+          <a href="labs/Android Studio. Лабораторная работа №8_material.zip" download class="download-btn">Скачать доп.материал</a>
+        </div>
+
+        <!-- Лаба 9 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №9. Создание собственного приложения на основе Jetpack Compose</h3>
+          <p>
+            Цель: Создать полноценное Compose-приложение (фильмы / аниме / игры — на ваш выбор), используя знания всех предыдущих
+            лабораторных работ.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №9.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+
+        <!-- Лаба 10-11 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №10-11. Создание приложения «Список студентов» с использованием Material Design</h3>
+          <p>
+            Цель: Научиться применять принципы Material Design в Android-приложениях с использованием Jetpack Compose. В результате
+            лабораторной работы будет создано приложение «Список студентов», которое демонстрирует использование цветовых схем, типографики,
+            форм и анимаций Material Design.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №10-11.pdf" download class="download-btn">Скачать работу (PDF)</a>
+          <a href="labs/Android Studio. Лабораторная работа №10-11_material.zip" download class="download-btn">Скачать доп.материал</a>
+        </div>
+
+        <!-- Лаба 12 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №12. Жизненный цикл Activity (Activity Lifecycle)</h3>
+          <p>
+            Цель: Изучить жизненный цикл Activity в Android и научиться правильно обрабатывать переходы между состояниями. В результате
+            лабораторной работы будет создано интерактивное приложение "Grade Clicker" (Кликер оценок), которое демонстрирует работу
+            lifecycle callbacks и сохранение состояния при изменении конфигурации устройства.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №12.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+
+        <!-- Лаба 13-14 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №13-14. ViewModel и архитектура Android-приложений</h3>
+          <p>
+            Цель: Познакомиться с архитектурными компонентами Android Jetpack, научиться использовать ViewModel для управления состоянием UI
+            и сохранения данных при изменении конфигурации устройства (поворот экрана, смена темы и т.д.). Разработать игру с подсчётом
+            очков, которая не теряет данные при повороте экрана.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №13-14.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+
+        <!-- Лаба 15-16 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №15-16. Navigation в Jetpack Compose</h3>
+          <p>
+            Цель: Изучить принципы навигации в приложениях на Jetpack Compose с использованием библиотеки Navigation Compose. Научиться
+            создавать многоэкранные приложения, передавать данные между экранами и управлять стеком навигации. Разработать приложение
+            "Студенческий планер" для 3 курса ИСП, с несколькими экранами для демонстрации различных типов навигации.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №15-16.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+
+        <!-- Лаба 17-18 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №17-18. Корутины на практике: Метеосводка</h3>
+          <p>
+            Цель: Изучить основы корутин в Kotlin для создания асинхронных операций в Android-приложениях. Научиться
+            использовать launch, async, диспетчеры корутин и обрабатывать длительные операции без блокировки UI-потока. Создать приложение
+            "Weather Dashboard" с имитацией загрузки данных о погоде из разных источников.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №17-18.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+
+        <!-- Лаба 19 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №19. Приложение "Моя Библиотека"</h3>
+          <p>
+            Цель: Создать самостоятельно Android-приложение с использованием всех изученных технологий: Jetpack Compose, Navigation, работа
+            с изображениями и создание пользовательского интерфейса. Закрепить навыки создания многостраничных приложений и оформления
+            проектной документации.
+          </p>
+          <a href="labs/Android Studio. Лабораторная работа №19.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+        <h2>Flutter</h2>
+        <h2>
+          Лабораторные работы необходимо выполнять на парах! В противном случае вы делаете видеозапись работы и защищаете её. Если вас
+          поймают на распознавании кода через Google Объектив и другие сервисы, вы получите штрафные баллы (-5) без возможности исправить
+          работу.
+        </h2>
+
+        <!-- Лаба 1 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №1. Быстрое погружение в язык Dart</h3>
+          <p>
+            Цель: Изучить основы языка Dart, сравнивая синтаксис и концепции с ранее изученными языками Kotlin и C#. Создать консольное
+            приложение ToDo.
+          </p>
+          <a href="labs/Flutter. Лабораторная работа №1.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+        <!-- Лаба 2 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №2. Знакомство с Flutter</h3>
+          <p>
+            Цель: Познакомиться с основным инструментом кроссплатформенной разработки — Flutter. Создать и запустить первый Flutter-проект в
+            браузере Chrome, изучить структуру проекта и базовые концепции фреймворка — виджеты и дерево виджетов.
+          </p>
+          <a href="labs/Flutter. Лабораторная работа №2.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+        <!-- Лаба 3 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №3. Flutter: структура UI и компонентный подход</h3>
+          <p>
+            Цель: Научиться строить UI через дерево виджетов, создавать собственные виджеты-классы, разбивать код на файлы и передавать
+            данные через параметры.
+          </p>
+          <a href="labs/Flutter. Лабораторная работа №3.pdf" download class="download-btn">Скачать работу (PDF)</a>
+          <a href="labs/Flutter. Лабораторная работа №3_material.zip" download class="download-btn">Скачать доп.материалы</a>
+        </div>
+        <!-- Лаба 4 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №4. Flutter: списки, модели данных и карточки</h3>
+          <p>
+            Цель: Научиться хранить данные в виде модели, строить прокручиваемые списки через ListView.builder и создавать переиспользуемые
+            карточки — на примере каталога аниме. Приложение, кот
+          </p>
+          <a href="labs/Flutter. Лабораторная работа №4.pdf" download class="download-btn">Скачать работу (PDF)</a>
+          <a href="labs/Flutter. Лабораторная работа №4_material.zip" download class="download-btn">Скачать доп.материалы</a>
+        </div>
+        <!-- Лаба 5 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №5. Асинхронность в Dart и Flutter. Создание приложения «Фото дня»</h3>
+          <p>
+            Цель: Понять концепцию асинхронного программирования — изучить Future, async/await в Dart. Применить эти знания во
+            Flutter-приложении, которое загружает случайные фотографии из интернета.
+          </p>
+          <a href="labs/Flutter. Лабораторная работа №5.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+        <!-- Лаба 6 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №6. Flutter: StatefulWidget и управление состоянием</h3>
+          <p>
+            Цель: Изучить разницу между StatelessWidget и StatefulWidget, научиться управлять состоянием приложения через setState(),
+            подключать локальные изображения и обрабатывать нажатия кнопок — на примере слот-машины.
+          </p>
+          <a href="labs/Flutter. Лабораторная работа №6.pdf" download class="download-btn">Скачать работу (PDF)</a>
+          <a href="labs/Flutter. Лабораторная работа №6_material.zip" download class="download-btn">Скачать доп.материалы</a>
+          <a href="labs/Flutter. Лабораторная работа №6_audio.zip" download class="download-btn">Скачать аудио</a>
+        </div>
+        <!-- Лаба 7 -->
+        <div class="lab-card">
+          <h3 class="lab-title">Лабораторная работа №7. Flutter: иконка, сборка и публикация</h3>
+          <p>
+            Цель: Доделать приложение слот-машины. Добавить воспроизведение звука. Создать иконку приложения в Krita, подключить её к
+            Flutter-проекту, собрать финальный билд под Web и Android, оформить репозиторий на GitHub как полноценный публичный проект.
+          </p>
+          <a href="labs/Flutter. Лабораторная работа №7.pdf" download class="download-btn">Скачать работу (PDF)</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 IT-лаборатория. Все права защищены.</p>
+        <p>Образовательные материалы для студентов</p>
+      </div>
+    </footer>
+    <script src="../../main.js"></script>
+  </body>
+</html>

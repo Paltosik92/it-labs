@@ -1,0 +1,576 @@
+/* ===== Общие компоненты лабораторных работ =====
+   Подключается на всех страницах внутри labs/.
+   Глобальные переменные (--primary, --accent и т.д.) задаются в /style.css.
+*/
+
+/* ─── Дополнительные переменные ─── */
+:root {
+  --neon-purple: #7c3aed;
+  --neon-cyan: #06b6d4;
+  --surface-01: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --text-muted: #bfc6d0;
+}
+
+/* ─── Список карточек ─── */
+.labs-list {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+/* ─── Карточка ─── */
+.lab-card {
+  background: var(--surface-01);
+  text-align: justify;
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 1.25rem 1.4rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Неоновая полоска сверху при ховере */
+.lab-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neon-purple), var(--neon-cyan), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* Тонкая левая полоска (всегда видна) */
+.lab-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--neon-purple), var(--neon-cyan));
+  border-radius: 18px 0 0 18px;
+  transition: width 0.3s ease;
+}
+
+.lab-card li a {
+  color: var(--neon-cyan);
+}
+
+.lab-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124, 58, 237, 0.4);
+  box-shadow:
+    0 0 28px rgba(124, 58, 237, 0.18),
+    0 0 56px rgba(6, 182, 212, 0.07);
+}
+
+.lab-card:hover::before {
+  opacity: 1;
+}
+.lab-card:hover::after {
+  width: 5px;
+}
+
+/* ─── Заголовок карточки — градиентный текст ─── */
+.lab-title {
+  background: linear-gradient(90deg, #5633e2 0%, #3b8e98 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+  font-size: 1.72rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+/* ─── Мета-информация — pill-бейджи ─── */
+.lab-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.lab-meta > * {
+  display: inline-block;
+  background: rgba(124, 58, 237, 0.14);
+  color: #c4b5fd;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ─── Текст внутри карточки ─── */
+.lab-card p {
+  color: var(--text-muted);
+  margin: 0.35rem 0 0;
+  line-height: 1.62;
+  font-size: 1.42rem;
+}
+
+.lab-card ul {
+  padding-left: 1.2rem;
+  margin: 0.35rem 0;
+  color: var(--text-muted);
+  font-size: 1.22rem;
+}
+
+.lab-card ul li {
+  margin-bottom: 0.25rem;
+}
+
+/* ─── Кнопки скачивания ─── */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 30px;
+  border: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  margin-top: 0.9rem;
+  margin-right: 0.45rem;
+  white-space: nowrap;
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-cyan));
+  color: #fff;
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.45);
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease,
+    opacity 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow:
+    0 0 26px rgba(124, 58, 237, 0.6),
+    0 0 48px rgba(6, 182, 212, 0.2);
+  opacity: 0.92;
+  color: #fff;
+}
+
+.download-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+}
+
+/* ─── Видео-ссылки ─── */
+.video-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.video-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  background: rgba(6, 182, 212, 0.08);
+  color: #67e8f9;
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.video-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  background: rgba(6, 182, 212, 0.16);
+  border-color: rgba(6, 182, 212, 0.65);
+  box-shadow: 0 0 18px rgba(6, 182, 212, 0.28);
+  color: #a5f3fc;
+}
+
+.video-btn:active {
+  transform: scale(0.96);
+  box-shadow: none;
+}
+
+/* ─── Заголовок раздела ─── */
+.section-title {
+  margin: 2.5rem 0 0.9rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #a78bfa 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Маленькая неоновая черта слева */
+.section-title::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1.1em;
+  background: linear-gradient(180deg, var(--neon-purple), var(--neon-cyan));
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* ─── Предупреждение ─── */
+.lab-warning {
+  background: rgba(245, 158, 11, 0.08);
+  text-align: justify;
+  border-left: 3px solid #f59e0b;
+  padding: 0.85rem 1.2rem;
+  border-radius: 0 14px 14px 0;
+  margin: 1.25rem 0;
+  font-size: 1.4rem;
+  color: #fcd34d;
+  line-height: 1.6;
+  backdrop-filter: blur(8px);
+}
+
+/* ─── Заглушка (страница в разработке) ─── */
+.placeholder {
+  text-align: center;
+  padding: 3.5rem 2rem;
+  border: 1px dashed rgba(124, 58, 237, 0.4);
+  border-radius: 20px;
+  margin-top: 1.5rem;
+  background: rgba(124, 58, 237, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 65%);
+  animation: lab-pulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes lab-pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
+  }
+}
+
+.placeholder h3 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #a78bfa, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  letter-spacing: -0.01em;
+}
+
+.placeholder p {
+  font-size: 1.35rem;
+  color: var(--text-muted);
+  position: relative;
+}
+
+/* ─── Ссылки домашних заданий ─── */
+.homeworks-simple {
+  display: flex;
+  gap: 10px;
+  margin: 1.2rem 0;
+  flex-wrap: wrap;
+}
+
+.homeworks-simple a {
+  padding: 0.6rem 1.2rem;
+  background: rgba(124, 58, 237, 0.08);
+  border-radius: 14px;
+  text-decoration: none;
+  color: #c4b5fd;
+  flex: 1 1 auto;
+  min-width: 180px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.homeworks-simple a:hover {
+  transform: translateY(-3px);
+  border-color: rgba(6, 182, 212, 0.5);
+  background: rgba(6, 182, 212, 0.1);
+  box-shadow: 0 0 18px rgba(6, 182, 212, 0.2);
+  color: #67e8f9;
+}
+
+/* ─── Медиазапросы ─── */
+@media (max-width: 768px) {
+  .homeworks-simple {
+    gap: 8px;
+    margin: 1rem 0;
+  }
+  .homeworks-simple a {
+    padding: 12px 14px;
+    min-width: 140px;
+    font-size: 0.85rem;
+  }
+  .section-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeworks-simple a {
+    min-width: 100%;
+  }
+  .lab-card {
+    padding: 1rem 1.1rem;
+  }
+}
+
+/* ─── Прогресс-трекер ─── */
+.progress-summary {
+  background: var(--surface-01);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.45rem;
+}
+
+.progress-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.progress-count {
+  color: var(--neon-cyan);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.progress-count--full {
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.progress-bar-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+  border-radius: 4px;
+  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Карточка с трекером — отступ справа под кнопку */
+.lab-card--trackable {
+  padding-right: 3.2rem;
+}
+
+/* Кнопка-чекбокс */
+.lab-check {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(124, 58, 237, 0.35);
+  background: rgba(124, 58, 237, 0.07);
+  color: transparent;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lab-check:hover {
+  border-color: var(--neon-cyan);
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--neon-cyan);
+  transform: scale(1.15);
+}
+
+/* Выполненная карточка */
+.lab-card--done .lab-check {
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-cyan));
+  border-color: transparent;
+  color: #fff;
+}
+
+.lab-card--done {
+  border-color: rgba(6, 182, 212, 0.25);
+  opacity: 0.72;
+}
+
+.lab-card--done:hover {
+  opacity: 0.92;
+}
+
+.lab-card--done .lab-title {
+  opacity: 0.6;
+}
+
+/* ===== Светлая тема ===== */
+[data-theme="light"] {
+  --surface-01: rgba(255, 255, 255, 0.78);
+  --surface-02: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(108, 63, 255, 0.18);
+  --text-main: #1a1a2e;
+  --text-muted: #4a4a6a;
+}
+
+[data-theme="light"] .lab-card {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(108, 63, 255, 0.18);
+}
+
+[data-theme="light"] .lab-card p,
+[data-theme="light"] .lab-card ul {
+  color: #4a4a6a;
+}
+
+[data-theme="light"] .lab-card li a {
+  color: var(--neon-purple);
+}
+
+[data-theme="light"] .lab-warning {
+  background: rgba(245, 158, 11, 0.09);
+  color: #78350f;
+}
+
+[data-theme="light"] .section-title {
+  background: linear-gradient(90deg, var(--neon-purple) 0%, var(--neon-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .placeholder {
+  border-color: rgba(124, 58, 237, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] .placeholder p {
+  color: #4a4a6a;
+}
+
+[data-theme="light"] .homeworks-simple a {
+  background: rgba(124, 58, 237, 0.07);
+  border-color: rgba(124, 58, 237, 0.22);
+  color: var(--neon-purple);
+}
+
+[data-theme="light"] .homeworks-simple a:hover {
+  background: rgba(6, 182, 212, 0.08);
+  border-color: rgba(6, 182, 212, 0.45);
+  color: #0891b2;
+}
+
+[data-theme="light"] .progress-summary {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(108, 63, 255, 0.18);
+}
+
+[data-theme="light"] .progress-bar-track {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .lab-check {
+  border-color: rgba(124, 58, 237, 0.3);
+  background: rgba(124, 58, 237, 0.05);
+}
+
+[data-theme="light"] .lab-check:hover {
+  color: #0891b2;
+  background: rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.5);
+}
+
+[data-theme="light"] .lab-card--done {
+  border-color: rgba(6, 182, 212, 0.35);
+}
+
+[data-theme="light"] .video-btn {
+  background: rgba(6, 182, 212, 0.07);
+  border-color: rgba(6, 182, 212, 0.3);
+  color: #0891b2;
+}
+
+[data-theme="light"] .video-btn:hover {
+  background: rgba(6, 182, 212, 0.14);
+  border-color: rgba(6, 182, 212, 0.55);
+  color: #0e7490;
+}
